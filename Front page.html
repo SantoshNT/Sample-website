@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>RUBEX</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="jqueryUI/jquery-ui.css"> 
+  <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+  <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="jquery/jquery.js"></script>
+  <script src="jqueryUI/jquery-ui.js"></script>
+</head>
+<style>@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 4px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: bisque !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:black;
+}
+#footer a {
+    color: black;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:black;
+}
+#footer ul.social li a:hover{
+	color:black;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+body{
+  background-color: white;
+}
+button{
+    background-color: transparent;
+    border: none;
+  }
+.ui-dialog, .ui-dialog-content {
+    border:10px solid black; 
+    background-color: navajowhite !important;  
+    color: blue;
+  }
+.ui-dialog  .ui-dialog-buttonpane{ background-color: navajowhite;}
+.ui-dialog .ui-dialog-titlebar{background-color: navajowhite;}
+.ui-dialog{
+      border:200px red;
+    }
+.icon-bar{
+    
+    background-color: black;
+}
+.nav{
+  color: rgb(89, 0, 255);
+  
+}
+#div2{
+  background-color: cornsilk;
+  border: 2px solid red;
+}
+#button1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  font-size: 2vw;
+  padding: 12px 24px;
+  border-color:  white;
+  border-width:2px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+ 
+}
+
+  #title{
+    transition:ease-in 1ms;
+    margin-top: 10%;
+    padding: 5px;
+    color: blue;
+    font-size: 70px;
+  }
+  .dropdown-menu a:hover{
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-menu {display:inline-block;}
+
+.dropdown:hover .dropdown-toggle{background-color: beige;}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: rgb(229, 202, 190);
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+</style>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img src="rubex_mini.png" ></img>
+            <a id="title"class="navbar-brand" href="#page-top">RUBEX</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Classes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Class 1</a></li>
+                      <li><a href="#">Class 2</a></li>
+                      <li><a href="#">Class 3</a></li>
+                    </ul>
+                  </li>  
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">P1</a></li>
+                    <li><a href="#">P2</a></li>
+                    <li><a href="#">P3</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">About us<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">AB1</a></li>
+                      <li><a href="#">AB2</a></li>
+                      <li><a href="#">AB3</a></li>
+                    </ul>
+                  </li>
+                  <div class="searchbar">
+                    <input class="search_input" type="text" name="" placeholder="What are you looking for?" required="required">
+                    <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+                  </div>           
+                </ul>
+               
+            
+        </div>
+      
+    </div>
+  
+</nav>
+  <div class="container">
+    <h2>WELCOME</h2>  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+    
+     
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+                   <img src="https://specials-images.forbesimg.com/imageserve/1156421806/1920x0.jpg?fit=scale" style="width:100%;">
+
+        </div>
+  
+        <div class="item">
+          <img src="https://static-ssl.businessinsider.com/image/5d9b5bff52887931e8497a36-1405/141222twnmustang.jpg" alt="Image" style="width:100%;">
+         
+        </div>
+      
+        <div class="item">
+          <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Bugatti/Bugatti-Chiron/6524/1550828170128/front-left-side-47.jpg" alt="Image" style="width:100%;">
+         
+        </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+    
+<div class="container">
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <button type="button" class="close" id="mod_cls" data-dismiss="modal">&times;</button>
+      
+          <h4 class="modal-title">LOG IN</h4>
+        </div>
+        <div class="modal-body"><form id="close" onsubmit="return validate()">
+          <div class="inputs">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" id="username" placeholder="Enter Email ID" required>
+            <label id="error" style="color:red; visibility: hidden">INVALID</label>
+            
+        </div><br>
+        <div class="inputs">
+            <i class="fa fa-lock" aria-hidden="false"></i>
+            <input type="password" id="password" placeholder="Enter Password" required>
+           
+            </div><br>
+            <br>
+            <input class="button" style="background-color:transparent;" type="submit" value="SUBMIT">
+          
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<button type="button" id="button1" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">LOG IN</button>
+
+
+    <section id="footer">
+      <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Courses</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>xyx</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>abc</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>123</a></li>
+              </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Exams</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Boards</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>JEE</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>NEET</a></li>
+               </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Resourses</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>NCERT</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Sample Paper</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Blue Prints</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+            <ul class="list-unstyled list-inline social text-center">
+              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+              <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+          </div>
+          </hr>
+        </div>	
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+            <p><u><a href="https://www.google.com/">XYZ</a></u><p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="#" target="_blank">XYZ</a></p>
+          </div>
+          </hr>
+        </div>	
+      </div>
+    </section>
+    
+</body>
+<script>
+ 
+/* CODE FOR CLEARING DIALOG BOX*/
+
+ $(document).ready(function()
+{
+    $('#mod_cls').on('click', function () {
+  $('#close').trigger("reset");
+    console.log($('#close'));
+ })
+  });
+
+
+/*CODE FOR FORM VALIDATION WITHIN DIALOG BOX*/
+
+      function validate(){
+            var x = document.getElementById("username").value;
+            var y = document.getElementById("password").value;
+
+            
+           
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8}).([a-z]{2,3})?$/;
+           
+            if(regx.test(x)==true)
+                {
+                    
+                    document.getElementById("error").style.visibility="visible";
+                    document.getElementById("error").style.color="green";
+                    document.getElementById("error").innerHTML="valid";
+                    alert("Login Successful")
+                    return true;
+                
+                }else if(regx.test(x)==false)
+                {
+                    //alert("invalid");
+                    document.getElementById("error").style.visibility="visible";
+                    document.getElementById("error").style.color="red";
+                    document.getElementById("error").innerHTML="invalid";
+                    return false;
+                    
+                }
+            
+            
+                
+               else if(x.trim()=="")
+                {
+                   
+                    x.style.border="solid 3px red";
+                    document.getElementById("errorstyle1").style.visibility="visible";
+                    return false;
+                }
+                else if(y.trim()=="")
+                {
+                    
+                    y.style.border="solid 3px red";
+                    document.getElementById("errorstyle2").style.visibility="visible";
+                    return false;
+                }
+                else if(y.trim().length<5)
+                {
+                    alert("password should be atleast 5 characters");
+                    return false;
+                }
+                
+                    else 
+                {
+                 
+                    alert("Login successful");
+                }
+            }
+            
+
+  </script>
+</html>
